@@ -1,0 +1,104 @@
+body {
+  background-color: #ccc;
+  font-family: Arial; }
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start; }
+  @media screen and (min-width: 768px) {
+    .wrapper {
+      flex-direction: row;
+      flex-wrap: wrap; } }
+  @media screen and (min-width: 1024px) {
+    .wrapper {
+      flex-wrap: nowrap; } }
+
+.vehicle {
+  flex-grow: 1; }
+  @media screen and (min-width: 768px) {
+    .vehicle {
+      max-width: 50%; } }
+  @media screen and (min-width: 1024px) {
+    .vehicle {
+      max-width: none; } }
+  .vehicle__link {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none; }
+    @media screen and (min-width: 768px) {
+      .vehicle__link {
+        flex-direction: column; } }
+    .vehicle__link:hover .vehicle__image {
+      opacity: 0.7; }
+  .vehicle__media {
+    display: grid;
+    width: 200px;
+    background-color: #000; }
+    @media screen and (min-width: 768px) {
+      .vehicle__media {
+        width: auto; } }
+  .vehicle__image {
+    width: 100%; }
+    @media screen and (min-width: 1024px) {
+      .vehicle__image {
+        width: auto; } }
+  .vehicle__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 0;
+    flex-grow: 1;
+    border-bottom: 2px solid #eef1f1;
+    padding: 0 30px; }
+    @media screen and (min-width: 768px) {
+      .vehicle__data {
+        align-items: center;
+        border-bottom: none;
+        border-right: 2px solid #eef1f1;
+        padding: 30px 0; } }
+  .vehicle__name {
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    color: black; }
+    @media screen and (min-width: 768px) {
+      .vehicle__name {
+        padding: 10px 0;
+        margin: 0 0 20px 0;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black; } }
+  .vehicle__price {
+    color: #737373;
+    font-weight: normal;
+    font-size: 20px;
+    margin: 0;
+    font-family: "Open Sans", sans-serif; }
+    @media screen and (min-width: 768px) {
+      .vehicle__price {
+        font-size: 24px;
+        margin: 0 0 10px 0; } }
+  .vehicle__description {
+    color: #737373;
+    font-size: 16px;
+    margin: 0;
+    font-family: "Open Sans", sans-serif; }
+    @media screen and (min-width: 768px) {
+      .vehicle__description {
+        font-size: 20px; } }
+  .vehicle:last-of-type .vehicle__data {
+    border-bottom: none; }
+  @media screen and (min-width: 768px) {
+    .vehicle:nth-child(even) .vehicle__data {
+      border-right: none; } }
+  @media screen and (min-width: 1024px) {
+    .vehicle:last-of-type .vehicle__data {
+      border-right: none; }
+    .vehicle:nth-child(even) .vehicle__data {
+      border-right: 2px solid #eef1f1; } }
